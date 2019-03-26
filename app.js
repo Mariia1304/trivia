@@ -14,7 +14,7 @@ function setCounterZero() {
 function playGame() {
     setName();
     document.getElementById("welcome").style.display = "none";
-    document.getElementById('selectGame').innerHTML = "<p>Hola " + name + ' a continuación selecciona un tema de juego:</p><button onclick="playMovies()">Jugar con Películas</button><button onclick="playSeries()">Jugar con Series</button>';
+    document.getElementById('selectGame').innerHTML = "<p>Hola " + name + ' a continuación selecciona un tema de juego:</p><button onclick="playMovies()">Jugar con Películas</button><button onclick="playSeries()">Jugar con Series</button><button onclick="playDibujos()">Jugar con Dibujos</button>';
 }
 
 function playMovies() {
@@ -75,6 +75,39 @@ function questionTwoSeries(answer) {
 }
 
 function questionThreeSeries(answer) {
+    if (answer === "Winterfell") {
+        ++countCorrect;
+    } else {
+        ++countWrong;
+    }
+    finalResults();
+}
+// Dibujos
+function playDibujos() {
+    setCounterZero();
+    document.getElementById("selectGame").style.display = "none";
+    document.getElementById('mainContainer').innerHTML = '<img alt="Walter White" src="http://images6.fanpop.com/image/photos/37200000/Walter-White-breaking-bad-37267744-200-200.jpg" ><p>Pregunta 1: ¿Cuál es la profesión de Walter White en Breaking Bad?</p>  <button onclick="questionOneSeries(\'Bombero\')">A: Bombero</button> </br></br> <button onclick="questionOneSeries(\'Profesor\')">B: Profesor</button> </br></br> <button onclick="questionOneSeries(\'Policia\')">C: Policia</button>';
+}
+//preguntas
+function questionOneDibujos(answer) {
+    if (answer === "Profesor") {
+        ++countCorrect;
+    } else {
+        ++countWrong;
+    }
+    document.getElementById('mainContainer').innerHTML = '<img alt="Ragnar Lodbrok" src="https://i.pinimg.com/originals/bf/9a/f8/bf9af85da5f21e2ac0025f49c8110324.jpg" ><p>Pregunta 2: ¿Cuántos hijos varones tuvo Ragnar Lodbrok en la serie Vikings?</p>  <button onclick="questionTwoSeries(5)">A: 5</button> </br></br> <button onclick="questionTwoSeries(2)">B: 2</button> </br></br> <button onclick="questionTwoSeries(7)">C: 7</button>';
+}
+
+function questionTwoDibujos(answer) {
+    if (answer === 5) {
+        ++countCorrect;
+    } else {
+        ++countWrong;
+    }
+    document.getElementById('mainContainer').innerHTML = '<img alt="Winterfell" src="https://i.pinimg.com/236x/94/35/2b/94352bc00324ee7d44390793b8779337.jpg" ><p>Pregunta 3: ¿Cuál es la ciudad de la familia Stark en Game of Thrones?</p>  <button onclick="questionThreeSeries(\'Winterfell\')">A: Winterfell</button> </br></br> <button onclick="questionThreeSeries(\'Kings Landing\')">B: Kings Landing</button> </br></br> <button onclick="questionThreeSeries(\'Braavos\')">C: Braavos</button>';
+}
+
+function questionThreeDibujos(answer) {
     if (answer === "Winterfell") {
         ++countCorrect;
     } else {
