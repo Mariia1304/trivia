@@ -104,11 +104,11 @@ function questionTwoDibujos(answer) {
     } else {
         ++countWrong;
     }
-    document.getElementById('mainContainer').innerHTML = '<img alt="Winterfell" src="https://i.pinimg.com/236x/94/35/2b/94352bc00324ee7d44390793b8779337.jpg" ><p>Pregunta 3: ¿Cuál es la ciudad de la familia Stark en Game of Thrones?</p>  <button onclick="questionThreeSeries(\'Winterfell\')">A: Winterfell</button> </br></br> <button onclick="questionThreeSeries(\'Kings Landing\')">B: Kings Landing</button> </br></br> <button onclick="questionThreeSeries(\'Braavos\')">C: Braavos</button>';
+    document.getElementById('mainContainer').innerHTML = '<img alt="Coraline" src="http://images6.fanpop.com/image/photos/37900000/Coraline-Jones-coraline-37952123-200-200.jpg" ><p>Pregunta 3: ¿Que quería obtener de los niños la otra nadre de Coraline?</p>  <button onclick="questionThreeDibujos(\'La lengua\')">La lengua</button> </br></br> <button onclick="questionThreeDibujos(\'Los ojos\')">Los ojos</button> </br></br> <button onclick="questionThreeDibujos(\'Las uñas\')">Las uñas</button>';
 }
 
 function questionThreeDibujos(answer) {
-    if (answer === "Winterfell") {
+    if (answer === "Los ojos") {
         ++countCorrect;
     } else {
         ++countWrong;
