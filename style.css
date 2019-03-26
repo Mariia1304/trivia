@@ -19,6 +19,7 @@ button {
     max-width: 260px;
     margin: 5px;
     border-radius: 5px;
+    background-color: #AAF1ED;
 }
 #myName {
     height: 24px;
